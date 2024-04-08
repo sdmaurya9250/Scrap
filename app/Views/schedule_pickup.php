@@ -45,48 +45,32 @@
     </div>
     <!-- ------- end header ----- -->
 
-    <section class="container">
-        <div class="row text-center">
-            <div class="col">
-                <h3 class="margintop mx-auto">Your Profile</h3>
+    <div class="row text-center">
+            <div class="col mt-1">
+                <h3 class="margintop mx-auto">Schedule Pickup</h3>
             </div>
         </div>
-    </section>
     
     <section class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form action="<?php echo base_url('updateuser'); ?>" method="POST" enctype="multipart/form-data">
-                    <!-- <div class="form-group text-center">
-                        <img src="placeholder.jpg" alt="Profile Picture" class="img-thumbnail" id="profilePicPreview">
-                        <i class="fas fa-edit"></i>
-                    </div> -->
-                    <?php
-                         $img = !empty($user['image']) ? base_url('uploads/profile_pics/' . $user['image']) : base_url('placeholder.jpg');
-                    ?>
-                    <div class="form-group text-center">
-                        <!-- Display image and edit icon -->
-                        <label for="profilePicInput" style="cursor: pointer;">
-                            <img src="<?php echo $img ?>" alt="Profile Picture" class="img-thumbnail" id="profilePicPreview">
-                            <i class="fas fa-edit"></i> Change Picture
-                        </label>
-
-                        <!-- Hidden input field -->
-                        <input type="file" class="form-control-file" id="profilePicInput" name="profilePic" style="display: none;">
+                <form action="<?php echo base_url('schedule-pickup'); ?>" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Scrap Type</label>
+                        <select name="scrap" id="scrap" required class="form-control form-control-lg">
+                            <option value="PAPER">PAPER</option>
+                            <option value="METAL">METAL</option>
+                            <option value="E-WASTE">E-WASTE</option>
+                            <option value="CLOTHS">CLOTHS</option>
+                            <option value="PLASTIC">PLASTIC</option>
+                        </select>
+                        <!-- <input type="text" class="form-control form-control-lg" name="name" id="name" placeholder="Enter your name"> -->
                     </div>
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control form-control-lg" name="name" id="name" placeholder="Enter your name" value="<?= $user['name'] ?>">
+                        <label for="address">Address</label>
+                        <input type="address" required class="form-control form-control-lg" name="address" id="address" placeholder="Enter your address">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="Enter your email" value="<?= $user['email'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="tel" class="form-control form-control-lg" name="contact" id="mobile" placeholder="Enter your mobile number" value="<?= $user['contact'] ?>">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Schedule</button>
                 </form>
             </div>
         </div>

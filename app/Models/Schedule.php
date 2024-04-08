@@ -4,16 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class User extends Model
+class Schedule extends Model
 {
-    protected $table            = 'users';
+    protected $table            = 'schedules';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    // protected $allowedFields    = [];
-    protected $allowedFields = ['name','contact', 'email', 'password', 'otp','created_at','image'];
+    protected $allowedFields    = [];
 
     protected bool $allowEmptyInserts = false;
 

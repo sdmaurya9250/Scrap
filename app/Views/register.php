@@ -20,34 +20,48 @@
                         <img src="/images/how its work/work.png" alt="">
                     </div>
                     <!-- Display success message if it exists -->
-
                     <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                        <form class="login" id="Login" action="<?php echo base_url('login'); ?>" method="POST">
+                        <!-- Registration form -->
+                        <form  id="Registration" action="/register" method="POST">
 
                             <div class="form-outline mb-4">
-                            <label class="form-label" for="loginEmail">Email address</label>
-                            <input type="email" required name="email" id="loginEmail" class="form-control form-control-lg" value="<?= old('email') ?>" />
-                            <?php if(isset($validation) && $validation->hasError('email')): ?>
-                                <p class="text-danger"><?= $validation->getError('email') ?></p>
+                            <label class="form-label" for="name">Name</label>
+                                <input type="name" id="name" required name="name" class="form-control form-control-lg" />
+                                <?php if(isset($validation) && $validation->hasError('name')): ?>
+                                <p class="text-danger"><?= $validation->getError('name') ?></p>
                             <?php endif; ?>
                             </div>
+
                             <div class="form-outline mb-4">
-                             <label class="form-label" for="loginPassword">Password</label>
-                                <input type="password" required name="password" id="loginPassword" class="form-control form-control-lg" />
+                            <label class="form-label" for="registerNumber">Mobile Number</label>
+                                <input type="tel" id="registerNumber" required name="contact" class="form-control form-control-lg" />
+                                <?php if(isset($validation) && $validation->hasError('contact')): ?>
+                                <p class="text-danger"><?= $validation->getError('contact') ?></p>
+                            <?php endif; ?>
+                                
+                            </div>
+
+                            <div class="form-outline mb-4">
+                            <label class="form-label" for="registerEmail">Email address</label>
+                                <input type="email" id="registerEmail" required name="email" class="form-control form-control-lg" />
+                                <?php if(isset($validation) && $validation->hasError('email')): ?>
+                                <p class="text-danger"><?= $validation->getError('email') ?></p>
+                            <?php endif; ?>
+                               
+                            </div>
+
+
+                            <div class="form-outline mb-4" id="passwordInputField">
+                            <label class="form-label" for="registerPassword">New Password</label>
+                                <input type="password" required name="password" id="registerPassword" class="form-control form-control-lg" />
                                 <?php if(isset($validation) && $validation->hasError('password')): ?>
                                 <p class="text-danger"><?= $validation->getError('password') ?></p>
                             <?php endif; ?>
                             </div>
 
-        
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" >Sign Up</button>
 
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-                            <p class=" mt-3" style="text-align: center;">Don't have an Account?
-                                <a href="/register" >Sign Up</a>
-                            </p>
-                            <div class="d-flex justify-content-around align-items-center mb-4">
-                                <a href="/forgot-password">Forgot password?</a>
-                            </div>
+                            <p class=" mt-2" style="text-align: center;">Have an account. <a href="/login">Log in</a></p>
                         </form>
                     </div>
                 </div>
