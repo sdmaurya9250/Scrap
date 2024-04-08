@@ -1,0 +1,140 @@
+.size_i {
+    font-size: 3rem;
+    color: #17a2b8;
+}
+.size_i2 {
+    font-size: 3rem;
+    color: #007bff;
+}
+.size_i3 {
+    font-size: 3rem;
+    color: #ffc107;
+}
+
+.backcolor:hover {
+    background: linear-gradient(to right, rgba(104, 159, 56, 1) 0%, rgba(139, 195, 74, 1) 100%);
+}
+
+.c-info:hover i {
+    color: white;
+}
+
+.c-info:hover h6 {
+    color: white;
+}
+
+.how {
+    text-align: center;
+}
+
+.polygon {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+.polygon1 {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.polygon2 {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.polygon3 {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.polygon4 {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.polygon5 {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.size_1 {
+    font-size: 3rem;
+    color: #007bff;
+}
+.size_2 {
+    font-size: 3rem;
+    color: #dc3545;
+}
+.size_3 {
+    font-size: 3rem;
+    color: #ffc107;
+}
+.size_4 {
+    font-size: 3rem;
+    color: #17a2b8;
+}
+.size_5 {
+    font-size: 3rem;
+    color: #28a745;
+}
+
+
+san {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16384c;
+}
+.container1 {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.container1 .card1 {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container1 .card1:hover{
+    height: 420px;
+}
+.container1 .card1 .imgBx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 5px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container1 .card1 .imgBx img1{
+    max-width: 100%;
+    border-radius: 4px;
+    
+
+}
+.container1 .card1 .content1{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container1 .card1:hover .content1{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+
+}
