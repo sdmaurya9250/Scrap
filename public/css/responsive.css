@@ -1803,3 +1803,41 @@
 		font-size: 13px !important;
 	}
 }
+
+@media (min-width: 250px) and (max-width: 500px) {
+
+	nav.sidenav {
+		height: 100%;
+		max-width: 100% !important;
+		width: 100%;
+	}
+
+	.marginright{
+		margin-left: -20px !important;
+	}
+
+	nav.sidenav ul.main li {
+		margin-top: 20px !important;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 667px) {
+
+	.marginright{
+		margin-left: -20px !important;
+	}
+
+	nav.sidenav ul.main li {
+		margin-top: 20px !important;
+	}
+}
+
+@media (min-width: 200px) and (max-width: 350px) {
+
+	a.con {
+		padding: 0 13px !important;
+	}
+	.topside-menu li {
+		padding: 30px 5px 0 !important;
+	}
+}

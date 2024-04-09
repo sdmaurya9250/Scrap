@@ -111,9 +111,8 @@
       </footer> -->
      
       <nav class="sidenav">
-         <ul class="main">
+         <ul class="main marginright">
             <li><a href="/">Home</a></li>
-    
             <li><a href="#">How it Work</a></li>
             <li><a href="#success">Our Success</a></li>
             <li><a href="#">Contact Us</a></li>
