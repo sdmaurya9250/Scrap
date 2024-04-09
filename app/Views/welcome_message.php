@@ -1,14 +1,4 @@
 
-      <!--Header End-->
-      <!-- <div id="search">
-         <button type="button" class="close">×</button>
-         <form class="search-overlay-form">
-            <input type="search" value="" placeholder="type keyword(s) here" />
-            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-         </form>
-      </div> -->
-      <!--Slider Start-->
-
       <?php include(APPPATH . 'Views/components/header.php'); ?>
 
 <!-- Your main content goes here -->
@@ -90,8 +80,7 @@
       <!--Service Area End-->
 
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                <div class="modal-header">
@@ -214,51 +203,51 @@
          </div>
       </section>
 
-         <div class="container">
-            <div class="container1">
-               <div class="row">
-                  <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                     <div class="card1">
-                        <div class="imgBx">
-                           <img class="img1" src="/images/Paper/news.jpg" alt="">
-                        </div>
-                        <div class="content1">
-                           <h2>Card 1</h2>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
-                              dicta non
-                              iure minus rerum.</p>
-                        </div>
+      <div class="container">
+         <div class="container1">
+            <div class="row">
+               <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                  <div class="card1">
+                     <div class="imgBx">
+                        <img class="img1" src="/images/Paper/news.jpg" alt="">
+                     </div>
+                     <div class="content1">
+                        <h2>Card 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
+                           dicta non
+                           iure minus rerum.</p>
                      </div>
                   </div>
-                  <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                     <div class="card1">
-                        <div class="imgBx">
-                           <img class="img1" src="/images/Paper/magazine.jpg" alt="">
-                        </div>
-                        <div class="content1">
-                           <h2>Card 2</h2>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
-                              dicta non
-                              iure minus rerum.</p>
-                        </div>
+               </div>
+               <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                  <div class="card1">
+                     <div class="imgBx">
+                        <img class="img1" src="/images/Paper/magazine.jpg" alt="">
+                     </div>
+                     <div class="content1">
+                        <h2>Card 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
+                           dicta non
+                           iure minus rerum.</p>
                      </div>
                   </div>
-                  <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                     <div class="card1">
-                        <div class="imgBx">
-                           <img class="img1" src="/images/Paper/journal.jpg" alt="">
-                        </div>
-                        <div class="content1">
-                           <h2>Card 3</h2>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
-                              dicta non
-                              iure minus.</p>
-                        </div>
+               </div>
+               <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                  <div class="card1">
+                     <div class="imgBx">
+                        <img class="img1" src="/images/Paper/journal.jpg" alt="">
+                     </div>
+                     <div class="content1">
+                        <h2>Card 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt voluptas suscipit
+                           dicta non
+                           iure minus.</p>
                      </div>
                   </div>
                </div>
             </div>
          </div>
+      </div>
 
 
       <!--Services Slider Start-->
@@ -282,8 +271,7 @@
                <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
-                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg2.jpg"
-                           alt=""></div>
+                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg2.jpg" alt=""></div>
                      <div class="ser-txt">
                         <h4> <a href="#">Save World’s
                               Water Resources</a>
@@ -296,8 +284,7 @@
                <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
-                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg3.jpg"
-                           alt=""></div>
+                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg3.jpg" alt=""></div>
                      <div class="ser-txt">
                         <h4> <a href="#">Recycling & Waste
                               Management</a>
@@ -310,8 +297,7 @@
                <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
-                     <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg4.jpg"
-                           alt=""></div>
+                     <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg4.jpg" alt=""></div>
                      <div class="ser-txt">
                         <h4> <a href="#">Save Plants &
                               Forest Planting</a>
@@ -324,8 +310,7 @@
                <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
-                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg5.jpg"
-                           alt=""></div>
+                     <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg5.jpg" alt=""></div>
                      <div class="ser-txt">
                         <h4> <a href="#">Implement Solar
                               & Wind Energies</a>
@@ -342,16 +327,14 @@
       <!--Services Slider End-->
 
       <!--Activities Gallery Section Start-->
-      <section class="agallery gallery wf100 p80">
+      <!-- <section class="agallery gallery wf100 p80">
          <div class="container">
             <div class="row">
                <div class="col-lg-5">
-                  <!--title start-->
                   <div class="section-title">
                      <strong>Our Latest</strong>
                      <h2>Activities Gallery</h2>
                   </div>
-                  <!--title end-->
                </div>
                <div class="col-lg-7">
                   <ul class="flinks">
@@ -394,7 +377,7 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!--Activities Gallery Section End-->
 
       <!--Current Promises Section Start-->

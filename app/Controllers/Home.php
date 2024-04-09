@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use Twilio\Rest\Client;
 use App\Models\User;
+
 class Home extends BaseController
 {
     public function index(): string
@@ -22,7 +23,7 @@ class Home extends BaseController
         $userModel = new User(); // Load the User model
         // Get user by email
         $user = $userModel->where('email', session()->get('email'))->first();
-        
+
         if ($user) {
             // Check if the user exists
             $contact = $user->contact ?? ''; // Get the contact field if available, otherwise set it to an empty string
@@ -80,8 +81,8 @@ class Home extends BaseController
                     'email'     => 'required|valid_email',
                     'password'  => 'required|min_length[6]|max_length[20]'
                 ];
-                
-        
+
+
                 if (!$this->validate($rules)) {
                     return view('register', [
                         'validation' => $this->validator
@@ -93,13 +94,13 @@ class Home extends BaseController
                 $email = trim($this->request->getPost('email'));
                 $name = trim($this->request->getPost('name'));
                 $password = trim($this->request->getPost('password'));
-                
+
                 // Generate OTP
                 $otp = mt_rand(100000, 999999);
                 session()->set('otp', $otp);
                 session()->set('email', $email);
                 session()->set('set_otp', TRUE);
-                
+
                 $userData = [
                     'name' => $name,
                     'contact' => $contact,
@@ -108,8 +109,8 @@ class Home extends BaseController
                     'otp' => $otp,
                     'created_at' => date('Y-m-d H:i:s')
                 ];
-    
-    
+
+
                 $userModel = new \App\Models\User();
                 $inserted = $userModel->insert($userData);
                 return redirect()->to(base_url('verify-otp'));
@@ -118,8 +119,8 @@ class Home extends BaseController
             }
         }
         return view('register');
-}
-    
+    }
+
 
 
     // public function verify_otp() {
@@ -128,52 +129,51 @@ class Home extends BaseController
     // }
 
 
-    public function schedule_pickup() {
+    public function schedule_pickup()
+    {
 
         $rules = [
             'scrap'     => 'required',
             'address'  => 'required'
         ];
-        
+
 
         if (!$this->validate($rules)) {
             return view('register', [
                 'validation' => $this->validator
             ]);
         }
-
-        
-
     }
 
-    public function process_otp_verification() {
+    public function process_otp_verification()
+    {
 
         $rules = [
             'otp'   => 'required|max_length[6]'
         ];
-        
+
         if (!$this->validate($rules)) {
             return view('verify_otp_form', [
                 'validation' => $this->validator
             ]);
         }
-        
+
 
         // Get OTP from form
         $otp_entered = trim($this->request->getPost('otp'));
         $email = session()->get('email');
-        
+
         // Load user model
 
 
-        $userModel = new \App\Models\User(); 
+        $userModel = new \App\Models\User();
         // Get user by email
         $user = $userModel->where('email', $email)->first();
-    
+
         if ($user && $otp_entered) {
             // Get OTP from session
             $otp_session = session()->get('otp');
-    
+
             if ($otp_entered == $otp_session) {
                 // OTP verification successful
                 // Clear OTP session
@@ -201,19 +201,19 @@ class Home extends BaseController
                 'email'    => 'required|valid_email',
                 'password' => 'required|min_length[6]'
             ];
-    
+
             if (!$this->validate($rules)) {
                 return view('login', [
                     'validation' => $this->validator
                 ]);
             }
-    
+
             $email = trim($this->request->getPost('email'));
             $password = trim($this->request->getPost('password'));
-    
+
             $userModel = new \App\Models\User(); // Adjust according to your actual model name
             $user = $userModel->where('email', $email)->first();
-    
+
             if ($user) {
                 if (password_verify($password, $user['password'])) {
                     // If login is successful, store user data in session
@@ -223,7 +223,7 @@ class Home extends BaseController
                         'email' => $user['email']
                         // Add more user data if needed
                     ];
-    
+
                     session()->set($userData);
                     session()->set('user_id', $user['id']);
                     // session()->set_userdata('logged_in', TRUE);
@@ -238,10 +238,10 @@ class Home extends BaseController
                 return redirect()->back()->withInput()->with('error', 'Invalid email or password');
             }
         }
-    
+
         return view('login');
     }
-    
+
 
 
     public function destroy_session()
@@ -262,22 +262,22 @@ class Home extends BaseController
         $email = $this->request->getPost('email');
         $name = $this->request->getPost('name');
         $contact = $this->request->getPost('contact');
-    
+
         // Load the User model
         $userModel = new User();
-    
+
         // Get the user record by email
         $user = $userModel->where('email', $email)->first();
-    
+
         // Check if the user exists
         if ($user) {
             // Check if there is a new profile picture uploaded
             $profilePic = $this->request->getFile('profilePic');
-    
+
             if ($profilePic->isValid() && !$profilePic->hasMoved()) {
                 // Generate a unique name for the profile picture based on date and time
                 $newName = date('ymdHis') . '_' . $name . '.png';
-    
+
                 // Check if the user already has a profile picture
                 if (!empty($user['image'])) {
                     // If the user has an existing profile picture, delete it
@@ -286,12 +286,12 @@ class Home extends BaseController
                         unlink($oldImagePath);
                     }
                 }
-    
+
                 // Convert uploaded image to PNG format and save it
                 $image = imagecreatefromstring(file_get_contents($profilePic->getTempName()));
                 imagepng($image, ROOTPATH . 'public/uploads/profile_pics/' . $newName);
                 imagedestroy($image);
-    
+
                 // Update user's information
                 $user['name'] = $name;
                 $user['contact'] = $contact;
@@ -301,7 +301,7 @@ class Home extends BaseController
                 $user['name'] = $name;
                 $user['contact'] = $contact;
             }
-    
+
             // Save the changes
             if ($userModel->save($user)) {
                 // Update successful
@@ -313,8 +313,26 @@ class Home extends BaseController
             // User not found
             return redirect()->back()->withInput()->with('error', 'User not found');
         }
-}
-    
+    }
 
-
+    public function paper(): string
+    {
+        return view('paper');
+    }
+    public function plastic(): string
+    {
+        return view('plastic');
+    }
+    public function metal(): string
+    {
+        return view('metal');
+    }
+    public function ewaste(): string
+    {
+        return view('ewaste');
+    }
+    public function clothe(): string
+    {
+        return view('clothe');
+    }
 }
