@@ -177,7 +177,7 @@
       <section class="container">
          <div class="row">
             <div class="col-md-6 mt-5" data-aos="zoom-in-up">
-               <a href="/demo.html">
+               <a href="/schedule-pickup">
                   <div class="c-info text-center shadow-lg border border-info backcolor">
                      <i class="size_i fa-solid fa-clock"></i>
                      <h6 class="p-3">Schedule Pickup</h6>

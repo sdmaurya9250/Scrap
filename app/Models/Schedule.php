@@ -12,7 +12,7 @@ class Schedule extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields = ['user_id','pickup_address', 'type', 'created_at','status'];
 
     protected bool $allowEmptyInserts = false;
 

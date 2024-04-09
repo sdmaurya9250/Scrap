@@ -32,7 +32,7 @@ $routes->get('/logout', 'Home::destroy_session');
 
 $routes->post('/process_otp_verification', 'Home::process_otp_verification');
 $routes->post('/updateuser', 'Home::update');
-$routes->post('/schedule-pickup', 'Home::schedule_pickup');
+$routes->post('/schedule-pickup', 'ScheduleController::schedule_pickup');
 // $routes->get('/verify-otp', 'Home::verify_otp');
 $routes->get('/verify-otp', function() {
     if(session()->get('set_otp')){
@@ -49,6 +49,11 @@ $routes->get('/support', function() {
 $routes->get('/schedule-pickup', function() {
         return view('schedule_pickup');
 });
+
+$routes->get('/fetch_my_order', 'ScheduleController::fetch_my_order');
+// $routes->get('/fetch_my_order', function() {
+//        echo "Hello";
+// });
 
 
 // $routes->get('/dashboard', 'Home::dashboard', ['filter' => 'auth']);

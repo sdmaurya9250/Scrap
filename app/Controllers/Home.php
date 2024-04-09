@@ -128,23 +128,6 @@ class Home extends BaseController
     // }
 
 
-    public function schedule_pickup() {
-
-        $rules = [
-            'scrap'     => 'required',
-            'address'  => 'required'
-        ];
-        
-
-        if (!$this->validate($rules)) {
-            return view('register', [
-                'validation' => $this->validator
-            ]);
-        }
-
-        
-
-    }
 
     public function process_otp_verification() {
 
