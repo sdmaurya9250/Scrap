@@ -56,6 +56,7 @@ $routes->get('/schedule-pickup', function() {
 });
 
 $routes->get('/fetch_my_order', 'ScheduleController::fetch_my_order');
+$routes->get('/my-order', 'ScheduleController::schedule_pickup');
 // $routes->get('/fetch_my_order', function() {
 //        echo "Hello";
 // });

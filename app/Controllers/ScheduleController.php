@@ -12,35 +12,32 @@ class ScheduleController extends BaseController
         //
     }
 
-    public function fetch_my_order() {
-        // Load necessary libraries and models
-        // $this->load->model('Schedule_model');
-        $userModel = new \App\Models\Schedule();
+    public function fetch_my_order()
+    {
+
+        $type = trim($this->request->getGet('type'));
+        $userModel = new \App\Models\Schedule(); // Adjust according to your actual model name
     
-        // Fetch data from the database
-        $result = $this->Schedule_model->get_schedule_by_id(session()->get('user_id'));
-    
+        if($type == 'N'){
+            $result = $userModel->where('user_id', session()->get('user_id'))
+            ->where('status', $type) // Add the new condition here
+            ->findAll();
+        }else{
+            $result = $userModel->where('user_id', session()->get('user_id'))
+            ->where('status', $type) // Add the new condition here
+            ->findAll();
+        }
+
         if ($result) {
-            // Assuming you have a method 'getOrders()' in your Schedule model to retrieve associated orders
-            $orders = $result->getOrders();
-    
-            // You may need to format the data according to your needs
-            $formattedOrders = [];
-            foreach ($orders as $order) {
-                $formattedOrders[] = [
-                    'pickup_address' => $order->pickup_address,
-                    'scrap_type' => $order->scrap_type,
-                    'created_at' => $order->created_at
-                ];
-            }
-    
+
             // Return data as JSON
-            echo json_encode($formattedOrders);
+            return $this->response->setJSON($result);
         } else {
             // Return empty array if user's schedule is not found
-            echo json_encode([]);
+            return $this->response->setJSON([]);
         }
     }
+    
     
     
     public function schedule_pickup() {

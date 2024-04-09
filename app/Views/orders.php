@@ -22,6 +22,10 @@
     <link href="/css/prettyPhoto.css" rel="stylesheet">
     <link href="/css/all.min.css" rel="stylesheet">
     <link href="/css/slick.css" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+<!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script> -->
+
     <!-- CSS FILES End -->
     <style>
         body {
@@ -68,7 +72,7 @@
     <section class="container">
     <div class="row">
         <div class="col-md-6 margintop" data-aos="zoom-in-up">
-            <a href="#" onclick="fetchAndPopulateData()">
+            <a href="#" onclick="fetchAndPopulateData('N')">
                 <div class="c-info text-center shadow-lg border border-info backcolor">
                     <i class="size_i fa-solid fas fa-calendar-alt"></i>
                     <h6 class="p-3">Upcoming</h6>
@@ -76,7 +80,7 @@
             </a>
         </div>
         <div class="col-md-6 margintop" data-aos="zoom-in-up">
-            <a href="#" onclick="fetchAndPopulateData()">
+            <a href="#" onclick="fetchAndPopulateData('A')">
                 <div class="c-info text-center shadow-lg border border-primary backcolor">
                     <i class="size_i2 fa-solid fas fa-clipboard-check"></i>
                     <h6 class="p-3">Completed</h6>
@@ -93,7 +97,7 @@
                 <div class="card shadow-lg c-info border  address-card ">
                     <div class="card-body text-center">
                         <!-- <h5 class="card-title text-white">No Order List</h5> -->
-                        <table class="table">
+                        <table class="table table-striped-columns" id="example">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
@@ -167,26 +171,31 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    function fetchAndPopulateData() {
+    function fetchAndPopulateData(id) {
         $.ajax({
             url: '<?php echo base_url('fetch_my_order'); ?>',
             type: 'GET',
             dataType: 'json',
+            data: { type: id },
             success: function(data) {
                 console.log(data);
-                
+                $('#your_address').show();
                 // Populate the table with the received data
-                // var tableBody = $('#your_address table tbody');
-                // tableBody.empty(); // Clear existing rows
-                // $.each(data, function(index, item) {
-                //     tableBody.append('<tr><th scope="row">' + (index + 1) + '</th><td>' + item.pickup_address + '</td><td>' + item.scrap_type + '</td><td>' + item.created_at + '</td></tr>');
-                // });
+                var tableBody = $('#your_address table tbody');
+                tableBody.empty(); // Clear existing rows
+                $.each(data, function(index, item) {
+                    tableBody.append('<tr><th scope="row">' + (index + 1) + '</th><td>' + item.pickup_address + '</td><td>' + item.type + '</td><td>' + item.created_at + '</td></tr>');
+                });
             },
             error: function(xhr, status, error) {
                 console.error(xhr.responseText);
             }
         });
     }
+    $(document).ready(function() {
+    $('#example').DataTable();
+});
+
 </script>
 
 </body>
