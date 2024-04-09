@@ -104,7 +104,7 @@
          <div class="container mt-5">
             <ul>
                <li>
-                  <a href="paper.html">
+                  <a href="/paper">
                      <div class="sinfo">
                         <img src="/images/Paper/p1.png" alt="">
                         <h6>PEPAR</h6>
@@ -113,7 +113,7 @@
                   </a>
                </li>
                <li>
-                  <a href="metal.html">
+                  <a href="/metal">
                      <div class="sinfo">
                         <img src="/images/Metal/metal.png" alt="">
                         <h6>METAL</h6>
@@ -122,7 +122,7 @@
                   </a>
                </li>
                <li>
-                  <a href="/plastic.html">
+                  <a href="/plastic">
                      <div class="sinfo">
                         <img src="/images/Plastic/plastic.png" alt="">
                         <h6>PLASTIC</h6>
@@ -131,7 +131,7 @@
                   </a>
                </li>
                <li>
-                  <a href="/ewaste.html">
+                  <a href="/ewaste">
                      <div class="sinfo">
                         <img src="/images/E-waste/ewaste.png" alt="">
                         <h6>E-WASTE</h6>
@@ -140,7 +140,7 @@
                   </a>
                </li>
                <li>
-                  <a href="/clothe.html">
+                  <a href="/clothe">
                      <div class="sinfo">
                         <img src="/images/Clothe/clothe.jpg" alt="">
                         <h6>CLOTHES</h6>
@@ -185,7 +185,7 @@
                </a>
             </div>
             <div class="col-md-6 mt-5" data-aos="zoom-in-up">
-               <a href="/paper.html">
+               <a href="/paper">
                   <div class="c-info text-center shadow-lg border border-primary backcolor">
                      <i class="size_i2 fa-solid fa-clipboard-list"></i>
                      <h6 class="p-3">Rate List</h6>
@@ -193,12 +193,41 @@
                </a>
             </div>
          </div>
+         <!-- Button to trigger modal -->
          <div class="row">
             <div class="col-md-12 mt-5" data-aos="zoom-in-up">
-               <div class="c-info text-center shadow-lg border border-warning backcolor">
+               <div class="c-info text-center shadow-lg border border-warning backcolor" data-toggle="modal" data-target="#videoModal">
                   <i class="size_i3 fa-solid fa-truck-fast"></i>
                   <h6 class="p-3">How it will Work?</h6>
                </div>
+            </div>
+         </div>
+         <!-- Modal -->
+         <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header text-center">
+                     <h5 class="modal-title mx-auto" id="videoModalLabel">How it will Work</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="images/mov_bbb.mp4" allowfullscreen allow="autoplay"></iframe>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12 mt-5" data-aos="zoom-in-up">
+               <a href="/orders">
+                  <div class="c-info text-center shadow-lg border border-warning backcolor">
+                     <i class="size_i2 fa-solid fas fa-calendar"></i>
+                     <h6 class="p-3">Upcomming Orders</h6>
+                  </div>
+               </a>
             </div>
          </div>
       </section>
@@ -277,7 +306,7 @@
          </div>
       </section>
 
-      <div class="container">
+      <!-- <div class="container">
          <div class="container1">
             <div class="row">
                <div class="col-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
@@ -321,14 +350,13 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
 
 
       <!--Services Slider Start-->
-      <section class=" wf100 mt-5 p80bottom">
+      <!-- <section class=" wf100 mt-5 p80bottom">
          <div class="container">
             <div class="row">
-               <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
                      <div class="ser-thumb">
@@ -341,8 +369,6 @@
                      </div>
                   </div>
                </div>
-               <!--Services Box End-->
-               <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
                      <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg2.jpg" alt=""></div>
@@ -354,8 +380,6 @@
                      </div>
                   </div>
                </div>
-               <!--Services Box End-->
-               <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
                      <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg3.jpg" alt=""></div>
@@ -367,8 +391,6 @@
                      </div>
                   </div>
                </div>
-               <!--Services Box End-->
-               <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
                      <div class="ser-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg4.jpg" alt=""></div>
@@ -380,8 +402,6 @@
                      </div>
                   </div>
                </div>
-               <!--Services Box End-->
-               <!--Services Box Start-->
                <div class="ser-col">
                   <div class="ser-box">
                      <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="/images/serimg5.jpg" alt=""></div>
@@ -393,24 +413,20 @@
                      </div>
                   </div>
                </div>
-               <!--Services Box End-->
             </div>
          </div>
-         <!-- <div class="load-more text-center w-100"> <a href="#" class="lm">View More Work</a> </div> -->
-      </section>
+      </section> -->
       <!--Services Slider End-->
 
       <!--Activities Gallery Section Start-->
-      <section class="agallery gallery wf100 p80">
+      <!-- <section class="agallery gallery wf100 p80">
          <div class="container">
             <div class="row">
                <div class="col-lg-5">
-                  <!--title start-->
                   <div class="section-title">
                      <strong>Our Latest</strong>
                      <h2>Activities Gallery</h2>
                   </div>
-                  <!--title end-->
                </div>
                <div class="col-lg-7">
                   <ul class="flinks">
@@ -437,11 +453,11 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!--Activities Gallery Section End-->
 
       <!--Current Promises Section Start-->
-      <section class="wf100 p80 text-center">
+      <!-- <section class="wf100 p80 text-center">
          <div class="shadow-lg rounded container">
             <h3 class="text-center pt-3">Your Achievments</h3>
             <div class="row p-5">
@@ -479,11 +495,11 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!--Current Promises Section End-->
 
       <!--Contact Start-->
-      <section class=" shadow-lg mt-5 mb-5 contact-page wf100 p80" id="ContactUs">
+      <!-- <section class=" shadow-lg mt-5 mb-5 contact-page wf100 p80" id="ContactUs">
          <div class="container">
             <div class="row">
                <div class="col-md-6">
@@ -518,11 +534,11 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <!--Contact End-->
 
       <!--Partner Logos Section Start-->
-      <div class="partner-logos wf100 mb80">
+      <!-- <div class="partner-logos wf100 mb80">
          <div class="container">
             <div id="partner-logos" class="owl-carousel owl-theme">
                <div class="item"><img src="/images/plogo1.png" alt=""></div>
@@ -537,15 +553,14 @@
                <div class="item"><img src="/images/plogo5.png" alt=""></div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!--Partner Logos Section End-->
       <!--Footer Start-->
-      <footer class="footer-style-2">
+      <!-- <footer class="footer-style-2">
          <div class="footer-top wf100">
             <div class="container">
                <div class="row">
                   <div class="col-lg-3 col-sm-6">
-                     <!--Footer Widget Start-->
                      <div class="footer-widget about-ecova">
                         <div class="f2logo"> <img src="/images/f2logo.png" alt=""> </div>
                         <p>We are Ecova: eco & environmental community. We need your support and help to Stop Globar
@@ -554,10 +569,8 @@
                            adipiscing.</p>
                         <a href="#" class="more">More About Ecova</a>
                      </div>
-                     <!--Footer Widget End-->
                   </div>
                   <div class="col-lg-3 col-sm-6">
-                     <!--Footer Widget Start-->
                      <div class="footer-widget">
                         <h5>Current Projects</h5>
                         <ul class="quick-links">
@@ -569,10 +582,8 @@
                            <li><a href="#">Saving Wildlife </a></li>
                         </ul>
                      </div>
-                     <!--Footer Widget End-->
                   </div>
                   <div class="col-lg-3 col-sm-6">
-                     <!--Footer Widget Start-->
                      <div class="footer-widget">
                         <h5>Tags</h5>
                         <ul class="ftags">
@@ -588,10 +599,8 @@
                            <li><a href="#">Recycling</a></li>
                         </ul>
                      </div>
-                     <!--Footer Widget End-->
                   </div>
                   <div class="col-lg-3 col-sm-6">
-                     <!--Footer Widget Start-->
                      <div class="footer-widget">
                         <h5>Latest Posts</h5>
                         <ul class="lastest-products">
@@ -606,7 +615,6 @@
                                  2018</span> </li>
                         </ul>
                      </div>
-                     <!--Footer Widget End-->
                   </div>
                </div>
             </div>
@@ -645,7 +653,7 @@
                </div>
             </div>
          </div>
-      </footer>
+      </footer> -->
       <!--Footer End-->
       <nav class="sidenav">
          <ul class="main marginright">
