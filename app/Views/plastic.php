@@ -262,7 +262,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="text-center">
-                            <img src="images/Paper/white.jpg" alt=""></img>
+                            <img src="images/Plastic/plastic.jpg" alt=""></img>
                         </div>
                         <!-- <h5 class="mt-2">INFORMATION...</h5> -->
                         <ul class="mt-3 ml-4">
