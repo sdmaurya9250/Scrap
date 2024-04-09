@@ -13,17 +13,36 @@ class ScheduleController extends BaseController
     }
 
     public function fetch_my_order() {
-
-        $this->load->model('your_model');
-        
-        // Fetch data from your_model
-        $data = $this->your_model->fetch_data();
-
-        // Return data as JSON
-        echo json_encode($data);
-
-
+        // Load necessary libraries and models
+        // $this->load->model('Schedule_model');
+        $userModel = new \App\Models\Schedule();
+    
+        // Fetch data from the database
+        $result = $this->Schedule_model->get_schedule_by_id(session()->get('user_id'));
+    
+        if ($result) {
+            // Assuming you have a method 'getOrders()' in your Schedule model to retrieve associated orders
+            $orders = $result->getOrders();
+    
+            // You may need to format the data according to your needs
+            $formattedOrders = [];
+            foreach ($orders as $order) {
+                $formattedOrders[] = [
+                    'pickup_address' => $order->pickup_address,
+                    'scrap_type' => $order->scrap_type,
+                    'created_at' => $order->created_at
+                ];
+            }
+    
+            // Return data as JSON
+            echo json_encode($formattedOrders);
+        } else {
+            // Return empty array if user's schedule is not found
+            echo json_encode([]);
+        }
     }
+    
+    
     public function schedule_pickup() {
         try {
 
