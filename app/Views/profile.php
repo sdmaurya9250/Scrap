@@ -98,23 +98,7 @@
 
 
 
-    <!-- --------- end ------------ -->
-    <nav class="sidenav">
-        <ul class="main marginright">
-            <li><a href="/dashboard">Home</a></li>
-            <li><a href="/location">Change Location</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="/orders">My Orders</a></li>
-            <li><a href="#">Wallet</a></li>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="#">Refer & Earn</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Terms & Condition</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </nav>
+    <?php include(APPPATH . 'Views/components/menu.php'); ?>
     <div class="overlay"></div>
     </div>
     <!--   JS Files Start  -->
