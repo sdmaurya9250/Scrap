@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use Twilio\Rest\Client;
 use App\Models\User;
+use App\Models\Support;
 
 class Home extends BaseController
 {
@@ -192,6 +193,51 @@ class Home extends BaseController
             return redirect()->back()->withInput()->with('error', 'Invalid request.');
         }
     }
+
+
+    public function supports(){
+
+        // echo "Hello";
+        // exit;
+
+        // Validation rules
+        $rules = [
+            'email'    => 'required|valid_email',
+            'name' => 'required|min_length[6]',
+            'contact' => 'required',
+            'message' => 'required'
+        ];
+    
+        try {
+            // Validation
+            if (!$this->validate($rules)) {
+                return view('support', [
+                    'validation' => $this->validator
+                ]);
+            }
+    
+            // Insert data into database
+            $model = new Support;
+    
+            $data = [
+                'email' => $this->request->getPost('email'),
+                'name' => $this->request->getPost('name'),
+                'contact' => $this->request->getPost('contact'),
+                'message' => $this->request->getPost('message'),
+                'created_at' => date('Y-m-d H:i:s')
+            ];
+    
+            $model->insert($data);
+    
+            // Optionally, you can redirect the user to another page after successful insertion
+            return redirect()->to('dashboard');
+        } catch (\Exception $e) {
+            // Handle any exceptions
+            // You can log the error, display an error message, or redirect the user to an error page
+            return "An error occurred: " . $e->getMessage();
+        }
+    }
+    
 
 
     public function login()
