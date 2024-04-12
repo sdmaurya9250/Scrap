@@ -43,16 +43,18 @@
         </section>
     </section>
     <!--   JS Files Start  -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-1.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/scroll.js"></script>
+   <!-- JavaScript links -->
+<script src="<?= base_url('public/js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= base_url('public/js/jquery-migrate-1.4.1.min.js') ?>"></script>
+<script src="<?= base_url('public/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('public/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('public/js/owl.carousel.min.js') ?>"></script>
+<script src="<?= base_url('public/js/jquery.prettyPhoto.js') ?>"></script>
+<script src="<?= base_url('public/js/isotope.min.js') ?>"></script>
+<script src="<?= base_url('public/js/slick.min.js') ?>"></script>
+<script src="<?= base_url('public/js/custom.js') ?>"></script>
+<script src="<?= base_url('public/js/scroll.js') ?>"></script>
+<!-- Add other JavaScript links as needed -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({

@@ -13,15 +13,15 @@
    <link rel="icon" href="images/favicon.png">
    <title>ECO HTML</title>
    <!-- CSS FILES START -->
-   <link href="/css/style.css" rel="stylesheet">
-   <link href="/css/custom.css" rel="stylesheet">
-   <link href="/css/color.css" rel="stylesheet">
-   <link href="/css/responsive.css" rel="stylesheet">
-   <link href="/css/owl.carousel.min.css" rel="stylesheet">
-   <link href="/css/bootstrap.min.css" rel="stylesheet">
-   <link href="/css/prettyPhoto.css" rel="stylesheet">
-   <link href="/css/all.min.css" rel="stylesheet">
-   <link href="/css/slick.css" rel="stylesheet">
+   <link href="<?= base_url('public/css/style.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/custom.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/color.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/responsive.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/owl.carousel.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/bootstrap.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/prettyPhoto.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/all.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/slick.css') ?>" rel="stylesheet">
    <!-- CSS FILES End -->
    <style>
       body {

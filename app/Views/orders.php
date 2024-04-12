@@ -12,16 +12,17 @@
 
     <link rel="icon" href="images/favicon.png">
     <title>ECO HTML</title>
-    <!-- CSS FILES START -->
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/custom.css" rel="stylesheet">
-    <link href="/css/color.css" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
-    <link href="/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/prettyPhoto.css" rel="stylesheet">
-    <link href="/css/all.min.css" rel="stylesheet">
-    <link href="/css/slick.css" rel="stylesheet">
+<!-- CSS links -->
+<link href="<?= base_url('public/css/style.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/custom.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/color.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/responsive.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/owl.carousel.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/bootstrap.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/prettyPhoto.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/all.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('public/css/slick.css') ?>" rel="stylesheet">
+<!-- Add other CSS links as needed -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script> -->
@@ -135,18 +136,18 @@
     <?php include(APPPATH . 'Views/components/menu.php'); ?>
     <div class="overlay"></div>
     </div>
-    <!--   JS Files Start  -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/jquery.prettyPhoto.js"></script>s
-    <script src="/js/isotope.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/custom.js"></script>
-    <script src="/js/scroll.js"></script>
-    <script src="/js/script.js"></script>
+<!-- JavaScript links -->
+<script src="<?= base_url('public/js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= base_url('public/js/jquery-migrate-1.4.1.min.js') ?>"></script>
+<script src="<?= base_url('public/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('public/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('public/js/owl.carousel.min.js') ?>"></script>
+<script src="<?= base_url('public/js/jquery.prettyPhoto.js') ?>"></script>
+<script src="<?= base_url('public/js/isotope.min.js') ?>"></script>
+<script src="<?= base_url('public/js/slick.min.js') ?>"></script>
+<script src="<?= base_url('public/js/custom.js') ?>"></script>
+<script src="<?= base_url('public/js/scroll.js') ?>"></script>
+<!-- Add other JavaScript links as needed -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
