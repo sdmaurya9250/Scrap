@@ -1,46 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="icon" href="images/logo.png">
-     <title>Scrapable</title>
-<!-- CSS links -->
-<link href="<?= base_url('public/css/style.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/custom.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/color.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/responsive.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/owl.carousel.min.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/bootstrap.min.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/prettyPhoto.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/all.min.css') ?>" rel="stylesheet">
-<link href="<?= base_url('public/css/slick.css') ?>" rel="stylesheet">
-<!-- Add other CSS links as needed -->
-    <style>
-        body {
-            background-color: #00e3ff14;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="wrapper home1">
-        <!--Header Start-->
-        <header class="header-style-1">
-            <nav class="navbar navbar-expand-lg shadow-lg">
-                <a class="logoo navbar-brand" href="/"><img src="/images/logo.png" class="logos" alt=""></a>
-                <ul class="float-left topside-menu">
-                    <li> <a class="con font-weight-bold" href="/login">Log in</a> </li>
-                </ul>
-            </nav>
-        </header>
+<?php include(APPPATH . 'Views/components/header.php'); ?>
         <section class="vh-100">
             <img src="/images/bgimg/bg.jpg" alt="" style="width: 20%;">
             <section class="vh-100">
