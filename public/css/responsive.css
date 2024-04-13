@@ -1168,11 +1168,12 @@
 	}
 
 	.slider-caption strong {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.slider-caption h1 {
 		font-size: 22px;
+		margin-top: -15%;
 	}
 
 	.about-pic,
