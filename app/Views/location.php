@@ -38,12 +38,24 @@
                 <a class="logoo navbar-brand" href="/"><img src="/images/logo.png" class="logos" alt=""></a>
                 <ul class="float-left topside-menu">
                     <li> <a class="con font-weight-bold" href="#"><?php echo session()->get('name'); ?></a> </li>
-                    <li class="burger font-weight-bold"> <a href="#"><i class="fas fa-bars"></i> Menu</a> </li>
+                    <li class="burger font-weight-bold"> <a><i class="fas fa-bars"></i> Menu</a> </li>
                 </ul>
             </nav>
         </header>
     </div>
     <!-- ------- end header ----- -->
+    <?php if (session()->has('success')) : ?>
+                        <div class="alert alert-success">
+                            <?= session('success') ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Display error message if it exists -->
+                    <?php if (session()->has('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?= session('error') ?>
+                        </div>
+                    <?php endif; ?>
 
     <section class="container">
         <div class="row">
@@ -56,22 +68,60 @@
         </div>
     </section>
 
+    <?php if(isset($model)): ?>
     <section class="container" id="your_address">
         <div class="row">
             <div class="col-md-4 mt-5" data-aos="zoom-in-up">
                 <div class="card shadow-lg c-info border border-warning address-card">
                     <div class="card-body">
-                        <h5 class="card-title">You Address</h5>
-                        <p class="card-text">123 Main Street, Cityville, Country</p>
-                        <p class="card-text">Postal Code: 12345</p>
-                        <p class="card-text">Phone: +1234567890</p>
-                        <p class="card-text">Email: example@example.com</p>
-                        <span class="delete-icon"><i class="fas fa-trash-alt"></i></span>
+                        <h5 class="card-title">Your Address</h5>
+                        <p class="card-text"><?= $model['houseno']; ?></p>
+                        <p class="card-text"><?= $model['landmark']; ?></p>
+                        <p class="card-text"><?= $model['address']; ?></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<?php else: ?>
+    <!-- Display an empty address section -->
+<?php endif; ?>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form class="login" action="<?php echo base_url('useraddress'); ?>" method="POST">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="address1">House/Flat No</label>
+                        <input type="text" name="houseno" id="houseno" class="form-control form-control-lg" value="<?= isset($model) ? $model['houseno'] : ''; ?>" />
+                        <?php if(isset($validation) && $validation->hasError('houseno')): ?>
+                            <p class="text-danger"><?= $validation->getError('houseno') ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="landmark">Landmark</label>
+                        <input type="text" name="landmark" id="landmark" class="form-control form-control-lg" value="<?= isset($model) ? $model['landmark'] : ''; ?>" />
+                        <?php if(isset($validation) && $validation->hasError('landmark')): ?>
+                            <p class="text-danger"><?= $validation->getError('landmark') ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="address">Address</label>
+                <input type="text" required id="address" required name="address" class="form-control form-control-lg" value="<?= isset($model) ? $model['address'] : ''; ?>" />
+                <?php if(isset($validation) && $validation->hasError('address')): ?>
+                    <p class="text-danger"><?= $validation->getError('address') ?></p>
+                <?php endif; ?>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
 
 
     <section class="container shadow-lg mt-5 mb-5">

@@ -38,7 +38,7 @@
                 <a class="logoo navbar-brand" href="/"><img src="/images/logo.png" class="logos" alt=""></a>
                 <ul class="float-left topside-menu">
                     <li> <a class="con font-weight-bold" href="#"><?php echo session()->get('name'); ?></a> </li>
-                    <li class="burger font-weight-bold"> <a href="#"><i class="fas fa-bars"></i> Menu</a> </li>
+                    <li class="burger font-weight-bold"> <a><i class="fas fa-bars"></i> Menu</a> </li>
                 </ul>
             </nav>
         </header>
@@ -50,9 +50,23 @@
                 <h3 class="margintop mx-auto">Schedule Pickup</h3>
             </div>
         </div>
+        
     
     <section class="container mt-5">
+    <?php if (session()->has('success')) : ?>
+                        <div class="alert alert-success">
+                            <?= session('success') ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Display error message if it exists -->
+                    <?php if (session()->has('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?= session('error') ?>
+                        </div>
+                    <?php endif; ?>
         <div class="row justify-content-center">
+            
             <div class="col-md-6">
                 <form action="<?php echo base_url('schedule-pickup'); ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">

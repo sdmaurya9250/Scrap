@@ -43,7 +43,7 @@
                 <a class="logoo navbar-brand" href="/"><img src="/images/logo.png" class="logos" alt=""></a>
                 <ul class="float-left topside-menu">
                     <li> <a class="con font-weight-bold" href="#"><?php echo session()->get('name'); ?></a> </li>
-                    <li class="burger font-weight-bold"> <a href="#"><i class="fas fa-bars"></i> Menu</a> </li>
+                    <li class="burger font-weight-bold"> <a><i class="fas fa-bars"></i> Menu</a> </li>
                 </ul>
             </nav>
         </header>

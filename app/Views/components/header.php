@@ -41,7 +41,7 @@
                   class="fas fa-bars"></i> </button> -->
             <ul class="float-left topside-menu">
                <li> <a class="con font-weight-bold" href="/login">Log in</a> </li>
-               <li class="burger font-weight-bold"> <a href="#"><i class="fas fa-bars"></i> Menu</a> </li>
+               <li class="burger font-weight-bold"> <a><i class="fas fa-bars"></i> Menu</a> </li>
             </ul>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <!-- <ul class="navbar-nav mr-auto">
@@ -70,7 +70,7 @@
                <!-- <ul class="float-left topside-menu">
                   <li> <a class="con font-weight-bold" href="#"></a> </li>
                   <li><a href="#search"> <i class="fas fa-search"></i> </a></li>
-                  <li class="burger font-weight-bold"> <a href="#"><i class="fas fa-bars"></i> Menu</a> </li>
+                  <li class="burger font-weight-bold"> <a><i class="fas fa-bars"></i> Menu</a> </li>
                </ul> -->
             </div>
          </nav>

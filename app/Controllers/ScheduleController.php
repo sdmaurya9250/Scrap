@@ -71,7 +71,7 @@ class ScheduleController extends BaseController
 
             $scheduleModel = new Schedule();
             $inserted = $scheduleModel->insert($userData);
-            return redirect()->to(base_url('my-order'));
+            return redirect()->to(base_url('schedule-pickup'))->with('success', 'Schedule Booked successfully.');
         } catch (\Exception $e) {
             return redirect()->back()->withInput()->with('error', 'Registration failed. Please try again later.');
         }

@@ -6,7 +6,8 @@ namespace App\Controllers;
 use Twilio\Rest\Client;
 use App\Models\User;
 use App\Models\Support;
-
+// use App\Models\UserDetails;
+use App\Models\UserDetails;
 class Home extends BaseController
 {
     public function index(): string
@@ -14,10 +15,91 @@ class Home extends BaseController
 
         return view('welcome_message');
     }
-    public function location(): string
+
+    public function useraddress()
     {
-        return view('location');
+        try {
+            $rules = [
+                'houseno'   => 'required',
+                'landmark'  => 'required',
+                'address'   => 'required'
+            ];
+    
+            if (!$this->validate($rules)) {
+                return view('location', [
+                    'validation' => $this->validator
+                ]);
+            }
+    
+            $userId = session()->get('user_id');
+            $houseno = trim($this->request->getPost('houseno'));
+            $landmark = trim($this->request->getPost('landmark'));
+            $address = trim($this->request->getPost('address'));
+            $now = date('Y-m-d H:i:s');
+    
+            $userModel = new \App\Models\UserDetails();
+    
+            // Check if user details already exist
+            $existingUserDetails = $userModel->where('user_id', $userId)->first();
+    
+            if ($existingUserDetails) {
+                // Update existing user details
+                $updated = $userModel->update($existingUserDetails['id'], [
+                    'houseno' => $houseno,
+                    'landmark' => $landmark,
+                    'address' => $address,
+                    'updated_at' => $now
+                ]);
+            } else {
+                // Insert new user details
+                $inserted = $userModel->insert([
+                    'user_id' => $userId,
+                    'houseno' => $houseno,
+                    'landmark' => $landmark,
+                    'address' => $address,
+                    'created_at' => $now,
+                    'updated_at' => $now
+                ]);
+            }
+    
+            return redirect()->to(base_url('location'));
+        } catch (\Exception $e) {
+            return redirect()->back()->withInput()->with('error', 'Address change failed.');
+        }
     }
+    
+
+
+    public function location()
+    {
+        // Retrieve the user's email from the session
+        $email = session()->get('email');
+        // echo $email ;
+        // exit;
+    
+        if (!$email) {
+            return "User email not found in session";
+        }
+    
+        // Find the user by their email
+        $userModel = new \App\Models\User();
+        $user = $userModel->where('email', $email)->first();
+    
+        if (!$user) {
+            return "User not found";
+        }
+    
+        // Find the user details by user ID
+        $UserDetails = new \App\Models\UserDetails();
+        $userDetails = $UserDetails->where('user_id', $user['id'])->first();
+
+
+    
+    
+        // If everything is found, return the location view with user details
+        return view('location', ['model' => $userDetails]);
+    }
+    
 
     public function profile()
     {
