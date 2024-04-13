@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" href="images/favicon.png">
-    <title>ECO HTML</title>
+    <link rel="icon" href="images/logo.png">
+     <title>Scrapable</title>
     <!-- CSS FILES START -->
 <!-- CSS links -->
 <link href="<?= base_url('public/css/style.css') ?>" rel="stylesheet">
@@ -59,7 +59,7 @@
                             <?= session('error') ?>
                         </div>
                     <?php endif; ?>
-                    <div class="row d-flex align-items-center justify-content-center h-100">
+                    <div class="row d-flex align-items-center justify-content-center h-100 img-aligns">
                         <div class="col-md-8 col-lg-7 col-xl-6 mb-3">
                             <img src="/images/how its work/work.png" alt="">
                         </div>

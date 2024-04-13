@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/favicon.png">
-    <title>ECO HTML</title>
+    <link rel="icon" href="images/logo.png">
+     <title>Scrapable</title>
     <!-- CSS FILES START -->
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/color.css" rel="stylesheet">

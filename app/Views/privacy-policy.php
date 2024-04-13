@@ -11,7 +11,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/logo.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>ECO HTML Log in</title>
     <!-- CSS FILES START -->
@@ -129,7 +129,7 @@
         <img src="images/bgimg/bg.jpg" alt="" style="width: 20%;">
         <section class="vh-100">
             <div class="container py-5 h-100">
-                <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="row d-flex align-items-center justify-content-center h-100 img-aligns">
                     <div class="col-md-8 col-lg-7 col-xl-6 mb-3">
                         <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                             class="img-fluid" alt="Phone image"> -->
