@@ -37,8 +37,10 @@ $routes->get('/logout', 'Home::destroy_session');
 
 $routes->post('/process_otp_verification', 'Home::process_otp_verification');
 $routes->post('/updateuser', 'Home::update');
+$routes->post('/password_change', 'Home::password_change');
 $routes->post('/schedule-pickup', 'ScheduleController::schedule_pickup');
 $routes->post('/useraddress', 'Home::useraddress');
+$routes->post('/forgot_password', 'Home::forgotpassword');
 // $routes->get('/verify-otp', 'Home::verify_otp');
 $routes->get('/verify-otp', function() {
     if(session()->get('set_otp')){
@@ -50,6 +52,16 @@ $routes->get('/verify-otp', function() {
 $routes->get('/support', function() {
 
         return view('support');
+    
+});
+$routes->get('/otp_verification', function() {
+
+        return view('otp_verification');
+    
+});
+$routes->get('/test', function() {
+
+        return view('test');
     
 });
 $routes->get('/schedule-pickup', function() {

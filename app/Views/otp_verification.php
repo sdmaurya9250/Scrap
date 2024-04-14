@@ -24,10 +24,10 @@
             <div class="col-md-6">
             <form class="login" action="<?php echo base_url('password_change'); ?>" method="POST">
                     <div class="form-outline mb-4">
-                                    <label class="form-label" for="loginEmail">Mobile No</label>
-                                    <input type="tel" name="contact" id="contact" class="form-control form-control-lg" readonly value="<?= session()->get('contacts') ?>" />
-                                    <?php if(isset($validation) && $validation->hasError('contact')): ?>
-                                <p class="text-danger"><?= $validation->getError('contact') ?></p>
+                                    <label class="form-label" for="loginEmail">Email</label>
+                                    <input type="tel" name="email" id="email" class="form-control form-control-lg" readonly value="<?= session()->get('email') ?>" />
+                                    <?php if(isset($validation) && $validation->hasError('email')): ?>
+                                <p class="text-danger"><?= $validation->getError('email') ?></p>
                             <?php endif; ?>
                                 </div>
                         <div class="form-outline mb-4">

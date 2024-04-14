@@ -36,7 +36,7 @@ class Filters extends BaseConfig
     public array $globals = [
         'before' => [
 
-            'auth' => ['except' => ['/', '/forgot-password', '/register', '/login', '/process_otp_verification', '/verify-otp']],
+            'auth' => ['except' => ['/', '/test', '/forgot_password' , 'password_change','/forgot-password', 'otp_verification','/register', '/login', '/process_otp_verification', '/verify-otp']],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',

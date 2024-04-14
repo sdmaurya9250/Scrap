@@ -73,6 +73,7 @@
         <?php else: ?>
             <!-- Menu for non-logged-in users -->
             <li><a href="/">Home</a></li>
+            <li><a href="/test">Test</a></li>
             <li><a href="#">How it Work</a></li>
             <li><a href="#success">Our Success</a></li>
             <li><a href="#">Contact Us</a></li>

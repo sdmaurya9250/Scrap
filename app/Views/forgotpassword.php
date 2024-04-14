@@ -23,11 +23,11 @@
                             </div>
                         <?php endif; ?>
                         <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                            <form class="login" id="Login" action="/loginform" method="POST">
+                            <form class="login" id="Login" action="/forgot_password" method="POST">
                                 <!-- Login form -->
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="loginEmail">OTP</label>
-                                    <input type="tel" name="otp" id="otp" class="form-control form-control-lg" />
+                                    <label class="form-label" for="loginEmail">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control form-control-lg" />
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Reset Password</button>
                             </form>
