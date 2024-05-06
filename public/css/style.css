@@ -2,6 +2,13 @@
     font-size: 3rem;
     color: #17a2b8;
 }
+
+.img-aligns img {
+    width: -webkit-fill-available;
+}
+
+
+
 .size_i2 {
     font-size: 3rem;
     color: #007bff;

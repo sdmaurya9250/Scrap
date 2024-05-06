@@ -26,10 +26,8 @@
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="name">Name</label>
-                                    <input type="name" id="name" required name="name" class="form-control form-control-lg" />
-                                    <?php if (isset($validation) && $validation->hasError('name')) : ?>
-                                        <p class="text-danger"><?= $validation->getError('name') ?></p>
-                                    <?php endif; ?>
+                                    <input type="file" id="files" required name="file" class="form-control form-control-lg" />
+                                   
                                 </div>
 
                                 <div class="form-outline mb-4">

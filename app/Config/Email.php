@@ -7,18 +7,18 @@ use CodeIgniter\Config\BaseConfig;
 class Email extends BaseConfig
 {
     public string $fromEmail  = '';
-    public string $fromName   = '';
+    public string $fromName   = 'Scrapable';
     public string $recipients = '';
 
     /**
      * The "user agent"
      */
-    public string $userAgent = 'CodeIgniter';
+    public string $userAgent = 'Scrapable';
 
     /**
      * The mail sending protocol: mail, sendmail, smtp
      */
-    public string $protocol = 'mail';
+    public string $protocol = 'smtp';
 
     /**
      * The server path to Sendmail.
@@ -28,22 +28,22 @@ class Email extends BaseConfig
     /**
      * SMTP Server Hostname
      */
-    public string $SMTPHost = '';
+    public string $SMTPHost = 'smtp';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = '';
+    public string $SMTPUser = 'contact@scrapable.in';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = '';
+    public string $SMTPPass = 'Contact@1234';
 
     /**
      * SMTP Port
      */
-    public int $SMTPPort = 25;
+    public int $SMTPPort = 587;
 
     /**
      * SMTP Timeout (in seconds)
